@@ -1,3 +1,5 @@
+import os
+
 def version():
 	return 1.0
 
@@ -6,4 +8,14 @@ def crea_dir(directorio):
 		print "el directorio ya existe"
 	else:
 		os.mkdir(directorio)
-	 	
+
+def entorno():
+	for clave,valor in os.environ.iteritems():
+		if clave=='USER' or clave=='PATH' or clave=='USER':
+			print valor	
+
+def gordos(directorio, size):
+	for x in os.listdir(directorio):
+		if os.path.isfile(x)==TRUE and os.path.getsize(x)>size: 
+			print os.path.getsize(x)
+	
