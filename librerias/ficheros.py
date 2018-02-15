@@ -18,4 +18,15 @@ def gordos(directorio, size):
 	for x in os.listdir(directorio):
 		if os.path.isfile(x)==TRUE and os.path.getsize(x)>size: 
 			print os.path.getsize(x)
+
+def visualizar(fichero):
+	if not os.access(fichero,0):
+		print "ficheronoexiste"
+		return false
+	f=open(fichero,'r')
+	while True:
+		linea=f.readline()
+		
+	archivo=open(fichero,"r")
+	print archivo.read()
 	
